@@ -5,7 +5,7 @@
            stage('Build Image') {
                steps {
                    script {
-                       docker.build("your-dockerhub-username/housing-prediction-app")
+                       docker.build("githubyourname123/housing-prediction-app")
                    }
                }
            }
@@ -13,7 +13,7 @@
                steps {
                    script {
                        docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials-id') {
-                           docker.image("your-dockerhub-username/housing-prediction-app").push("latest")
+                           docker.image("githubyourname123/housing-prediction-app").push("latest")
                        }
                    }
                }
